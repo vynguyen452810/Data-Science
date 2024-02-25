@@ -8,49 +8,29 @@ from sklearn import tree
 
 import utils
 
-# setup the randoms tate
-RANDOM_STATE =1234567
+RANDOM_STATE = 1234567
 
-#input: X_train, Y_train
-#output: Y_pred
 def logistic_regression_pred(X_train, Y_train):
-	#train a logistic regression classifier using X_train and Y_train. Use this to predict labels of X_train
-	#use default params for the classifier
-	
-	# instantiate model (using default params) 
 	logreg = LogisticRegression()
-	# fit the model with data
 	logreg.fit(X_train, Y_train)
-	# predict the response for new observations
 	y_predict = logreg.predict(X_train)
-
 	return y_predict
 
-#input: X_train, Y_train
-#output: Y_pred
 def svm_pred(X_train, Y_train):
-	#train a SVM classifier using X_train and Y_train. Use this to predict labels of X_train
-	#use default params for the classifier
 	linear = LinearSVC()
 	linear.fit(X_train, Y_train)
 	y_predict = linear.predict(X_train)
 	return y_predict
 
-#input: X_train, Y_train
-#output: Y_pred
 def decisionTree_pred(X_train, Y_train):
-	#train a logistic regression classifier using X_train and Y_train. Use this to predict labels of X_train
-	#use max_depth as 5
 	np.random.seed(RANDOM_STATE)
 	decision_tree = DecisionTreeClassifier(max_depth=5)
 	decision_tree.fit(X_train, Y_train)
 	y_predict = decision_tree.predict(X_train)
 	return y_predict
 
-#input: Y_pred,Y_true
-#output: accuracy, auc, precision, recall, f1-score
+
 def classification_metrics(Y_pred, Y_true):
-	#NOTE: It is important to provide the output in the same order
 	accuracy = accuracy_score(Y_pred, Y_true)
 	auc = roc_auc_score(Y_pred, Y_true)
 	precision = precision_score(Y_pred, Y_true)
@@ -59,7 +39,6 @@ def classification_metrics(Y_pred, Y_true):
 
 	return accuracy, auc, precision, recall, f1score
 
-#input: Name of classifier, predicted labels, actual labels
 def display_metrics(classifierName,Y_pred,Y_true):
 	print("______________________________________________")
 	print(("Classifier: "+classifierName))
@@ -69,7 +48,6 @@ def display_metrics(classifierName,Y_pred,Y_true):
 	print(("Precision: "+str(precision)))
 	print(("Recall: "+str(recall)))
 	print(("F1-score: "+str(f1score)))
-	print("______________________________________________")
 	print("")
 
 def main():

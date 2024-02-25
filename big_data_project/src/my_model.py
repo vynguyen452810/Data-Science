@@ -95,7 +95,6 @@ def gradientboosting_kfold(X,Y,k=5):
 	auc_list = []
 
 	for train, test in kfold.split(X):
-		# split data into train and test sets
 		X_train, X_test = X[train], X[test]
 		Y_train, Y_test = Y[train], Y[test]
 
@@ -117,7 +116,6 @@ def randomforest_randomisedCV(X,Y,iterNo=5,test_percent=0.2):
 	auc_list = []
 
 	for train, test in shuffle_split.split(X):
-		# split data into train and test sets
 		X_train, X_test = X[train], X[test]
 		Y_train, Y_test = Y[train], Y[test]
 
@@ -139,7 +137,6 @@ def gradientboosting_randomisedCV(X,Y,iterNo=5,test_percent=0.2):
 	auc_list = []
 
 	for train, test in shuffle_split.split(X):
-		# split data into train and test sets
 		X_train, X_test = X[train], X[test]
 		Y_train, Y_test = Y[train], Y[test]
 

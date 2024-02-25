@@ -10,7 +10,7 @@ from sklearn.metrics import *
 RANDOM_STATE = 1234567
 
 def get_acc_auc_kfold(X,Y,k=5):
-	#TODO:First get the train indices and test indices for each iteration
+	#First, to get the train indices and test indices for each iteration
 	#Then train the classifier accordingly
 	#Report the mean accuracy and mean auc of all the folds
 	kfold = KFold(n_splits=k, shuffle=True, random_state=RANDOM_STATE)
