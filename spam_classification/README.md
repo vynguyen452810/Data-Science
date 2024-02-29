@@ -42,12 +42,13 @@ To use this project, ensure you have the following libraries installed:
 * Scipy
 * BeautifulSoup
 * nltk
+
 You can install these libraries using pip, Python's package manager. Here's the command to install them:
     !pip install pandas numpy scikit-learn urllib scipy BeautifulSoup nltk
 
 ## Preparing the datasets
 * Load data from the source:
- "http://spamassassin.apache.org/old/publiccorpus/"
+http://spamassassin.apache.org/old/publiccorpus/
 
 ## Running the Code
 * Run the provided notebook (spam_classification.ipynb) to download, preprocess data, train models, and obtain results. Ensure all dependencies are installed beforehand.
