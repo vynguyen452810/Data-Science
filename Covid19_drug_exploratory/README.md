@@ -13,7 +13,7 @@ Construct and apply Graph Neural Network (GNN)  on various data sources to demon
 The study replicates the experiement and results from "Hsieh, K., Wang, Y., Chen, L., Zhao, Z., Savitz, S., Jiang, X., Tang, J., & Kim, Y. (2020). Drug Repurposing for COVID-19 using Graph Neural Network with Genetic, Mechanistic, and Epidemiological Validation. Research square, rs.3.rs-114758. https://doi.org/10.21203/rs.3.rs-114758/v1"
 
 ## Generalized WorkFlow:
-![Work Flow](images/workflow.png)
+![Workflow](workflow.png)
 
 ## Model Description and Implementation
 ### Knowledge Graph
