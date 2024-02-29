@@ -60,7 +60,7 @@ The study replicates the experiement and results from "Hsieh, K., Wang, Y., Chen
 * After evaluation, returned 47 candidate COVID-19 drugs
     * Excluding those are under trial or used in the model training, narrowed down to 16 candidate drugs 
     * Emodin, Choline, and Active  Hexose Correlated Compound (AHCC) ranked the highest, and these also have literature shoring drug efficacy against COVID-19 
-    * Result differs from the original paper. Out of the 10 drugs
+    * Result differs from the original paper. Out of the 10 drugs, 6 are consistent with original study
 
 # Usage
 ## Installation
